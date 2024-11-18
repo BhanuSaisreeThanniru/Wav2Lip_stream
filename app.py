@@ -6,6 +6,12 @@ import logging
 import numpy as np
 import sys
 
+# Clear the cache programmatically
+st.cache_data.clear()
+st.cache_resource.clear()
+st.write("Streamlit cache has been cleared.")
+
+
 numpy_path = np.__file__
 
 st.write("Numpy is installed at: ")
@@ -87,9 +93,3 @@ import os
 st.write("Python Executable:", sys.executable)
 st.write("Python Version:", sys.version)
 st.write("Environment Variables:", os.environ)
-import streamlit as st
-
-# Clear the cache programmatically
-st.cache_data.clear()
-st.cache_resource.clear()
-st.write("Streamlit cache has been cleared.")
