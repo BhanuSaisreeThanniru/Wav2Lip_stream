@@ -3,6 +3,19 @@ import tempfile
 import subprocess
 import streamlit as st
 import logging
+import numpy as np
+import sys
+
+# Clear the cache programmatically
+st.cache_data.clear()
+st.cache_resource.clear()
+st.write("Streamlit cache has been cleared.")
+
+
+numpy_path = np.__file__
+
+st.write("Numpy is installed at: ")
+st.code(numpy_path)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -69,3 +82,14 @@ if processed_file_path:
             file_name="result_voice.mp4",
             mime="video/mp4"
             )
+
+st.write("Numpy is installed at: ")
+st.code(numpy_path)
+
+st.write("python version: ",sys.version)
+
+import os
+
+st.write("Python Executable:", sys.executable)
+st.write("Python Version:", sys.version)
+st.write("Environment Variables:", os.environ)
