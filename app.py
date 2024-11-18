@@ -3,6 +3,12 @@ import tempfile
 import subprocess
 import streamlit as st
 import logging
+import numpy as np
+
+numpy_path = np._file_
+
+st.write("Numpy is installed at: ")
+st.code(numpy_path)
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
