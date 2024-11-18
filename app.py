@@ -75,3 +75,8 @@ if processed_file_path:
             file_name="result_voice.mp4",
             mime="video/mp4"
             )
+
+st.write("Numpy is installed at: ")
+st.code(numpy_path)
+
+st.write("python version: ",sys.version)
