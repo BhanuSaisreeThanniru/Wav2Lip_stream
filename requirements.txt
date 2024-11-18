@@ -8,3 +8,5 @@ tqdm
 numba
 flask
 streamlit
+watchdog
+llvmlite
