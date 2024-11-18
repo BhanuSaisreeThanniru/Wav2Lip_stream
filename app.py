@@ -4,6 +4,7 @@ import subprocess
 import streamlit as st
 import logging
 import numpy as np
+import sys
 
 numpy_path = np.__file__
 
