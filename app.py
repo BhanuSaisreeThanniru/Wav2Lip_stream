@@ -5,7 +5,7 @@ import streamlit as st
 import logging
 import numpy as np
 
-numpy_path = np._file_
+numpy_path = np.__file__
 
 st.write("Numpy is installed at: ")
 st.code(numpy_path)
