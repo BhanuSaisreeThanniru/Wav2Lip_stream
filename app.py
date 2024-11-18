@@ -81,3 +81,9 @@ st.write("Numpy is installed at: ")
 st.code(numpy_path)
 
 st.write("python version: ",sys.version)
+
+import os
+
+st.write("Python Executable:", sys.executable)
+st.write("Python Version:", sys.version)
+st.write("Environment Variables:", os.environ)
