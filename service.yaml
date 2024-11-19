@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wav2lip-service
+spec:
+  selector:
+    app: wav2lip
+  ports:
+    - protocol: TCP
+      port: 8501
+      targetPort: 8501
+  type: LoadBalancer

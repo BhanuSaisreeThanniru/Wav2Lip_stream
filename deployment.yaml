@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wav2lip-app
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wav2lip
+  template:
+    metadata:
+      labels:
+        app: wav2lip
+    spec:
+      containers:
+      - name: wav2lip
+        image: bhanusaisreethanniru/wav2lip-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8501
+      imagePullSecrets:
+      - name: regcred

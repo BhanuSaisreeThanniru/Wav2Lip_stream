@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wav2lip-ingress
+spec:
+  rules:
+  - host: wav2lip.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: wav2lip-service
+            port:
+              number: 80
